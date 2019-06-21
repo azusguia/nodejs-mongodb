@@ -1,0 +1,21 @@
+{
+  "name": "node-template",
+  "version": "1.0.0",
+  "description": "Basic template for NodeJS aplications",
+  "main": "./bin/server.js",
+  "scripts": {
+    "start": "node ./bin/server.js",
+    "dev": "nodemon ./bin/server.js"
+  },
+  "keywords": [],
+  "author": "Azuel Aguiar",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mongoose": "^5.4.12"
+  },
+  "devDependencies": {
+    "nodemon": "1.18.9"
+  }
+}
