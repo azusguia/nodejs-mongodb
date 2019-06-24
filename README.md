@@ -6,5 +6,6 @@ Basic template for nodejs and mongodb application using REST.
 
 ## Usage
 
-* git clone 
-* inside project execute the command `yarn run dev` or `npm run dev`
+* git clone
+* `yarn` / `npm i`
+* inside project execute the command `yarn run dev` / `npm run dev`
