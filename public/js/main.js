@@ -1,5 +1,5 @@
 window.addEventListener('load', () => {
-  console.log('NodeJS + MongoDB')
+  console.log('Node.js & MongoDB')
 })
 
 

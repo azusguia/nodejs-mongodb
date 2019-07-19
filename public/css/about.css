@@ -1,7 +1,15 @@
 #container {
-  grid-area: container;
-  display: grid;
-  grid-template-areas: 'content';
-  grid-template-rows: 100%;
-  grid-template-columns: 100%;
+	grid-area: container;
+	display: grid;
+	grid-template-areas: 'content';
+	grid-template-rows: 100%;
+	grid-template-columns: 100%;
+}
+
+#content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 30px;
+  font-family: Nunito, sans-serif;
 }

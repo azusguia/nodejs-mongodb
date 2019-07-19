@@ -12,7 +12,7 @@ const schema = new Schema({
 	user: { 
 		type: String,
 		required: [true, 'user is required'],
-		unique: true
+		trim: true
 	},
 	age: { 
 		type: Number,

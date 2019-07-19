@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
   <% include ../../partials/head.ejs %>
+  <script src="js/list.js"></script>
+  <link rel="stylesheet" href="css/list.css">
 </head>
 <body>
   <header id="menu">
@@ -11,7 +13,23 @@
   <main id="container">
     <% include ../../partials/crud.ejs %>    
     <div id="content">
-      <p>List Page</p>
+      <div class="list">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">User</th>
+                <th scope="col">Age</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody id="dataTable">
+                
+            </tbody>
+          </table>
+      </div>
     </div>
   </main>
 

@@ -3,14 +3,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const config = require('./config');
 
 const app = express();
 
-//mongoose.Promise = global.Promise;
-
-// connect to database 
-mongoose.connect(config.connectionString, { useNewUrlParser: true, dbName: 'name-db' });
+mongoose.connect('mongodb://localhost/mydb', { useNewUrlParser: true })
 mongoose.set('useCreateIndex', true);
 mongoose.set('useFindAndModify', false);
 

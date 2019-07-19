@@ -1,4 +1,4 @@
-* {
+body, html {
   margin: 0;
   padding: 0;
 }
@@ -12,12 +12,22 @@ body {
   height: 100vh;
 }
 
+#menu {
+  display: flex;
+  grid-area: header;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #52c234, #061700);
+  color: white;
+}
+
 #container {
   grid-area: container;
   display: grid;
   grid-template-areas: 'crud content';
   grid-template-rows: 100% 100%;
   grid-template-columns: 10% 90%;
+  background: rgb(240, 240, 240);
 }
 
 #footer {
@@ -25,13 +35,15 @@ body {
   grid-area: footer;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #52c234, #061700);
+  color: white;
 }
 
-#menu {
-  display: flex;
-  grid-area: header;
-  justify-content: center;
-  align-items: center;
+#footer > p {
+  height: 100%;
+  margin: 0;
 }
 
 #menu ul {
@@ -52,16 +64,16 @@ body {
 }
 
 #menu ul li:last-child {
- margin-right: 0px;
+  margin-right: 0px;
 }
 
 #menu ul li a {
-  color: #333;
+  color: white;
   text-decoration: none;
 }
 
 #menu ul li a:hover {
-  color: #6D6D6D;
+  color: rgb(223, 223, 223);
 }
 
 #crud {
@@ -70,17 +82,21 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  background: chocolate;
+  background: #343a40;
+}
+
+.btn-crud {
+  width: 80%;
 }
 
 #content {
   grid-area: content;
-  background: tan;
+  background: rgb(240, 240, 240);
 }
 
-/* @mobile */
+/* Mobile */
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
   
   #container {
     grid-area: container;

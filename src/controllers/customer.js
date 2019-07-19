@@ -16,9 +16,10 @@ exports.get = async (req, res, next) => {
 
 exports.save = async (req, res, next) => {
 	try {
-		if (!req.body.name || !req.body.user || !req.body.age)
+		if (!req.body.name || !req.body.user || !req.body.age) {
 			res.status(401).send({ message: 'Please, set all fields of Customer'})
-
+			return
+		}
 		let customer = new Customer({
 			name: req.body.name,
 			user: req.body.user,
@@ -29,7 +30,7 @@ exports.save = async (req, res, next) => {
 			message: 'Customer saved with success!'
 		})
 	} catch (e) {
-		res.status(500).send({
+		res.status(400).send({
 			message: 'Failed to process your request: ' + e
 		})
 	}
@@ -37,6 +38,10 @@ exports.save = async (req, res, next) => {
 
 exports.update = async (req, res, next) => {
 	try {
+		if (!req.body.name || !req.body.user || !req.body.age) {
+			res.status(401).send({ message: 'Please, set all fields of Customer'})
+			return
+		}
 		await Customer.findByIdAndUpdate(req.params.id, {
 			$set: {
 				name: req.body.name,
@@ -48,7 +53,7 @@ exports.update = async (req, res, next) => {
 			message: 'Customer updated with success!'
 		})
 	} catch (e) {
-		res.status(500).send({
+		res.status(400).send({
 			message: 'Failed to process your request: ' + e
 		})
 	}
@@ -56,12 +61,12 @@ exports.update = async (req, res, next) => {
 
 exports.delete = async (req, res, next) => {
 	try {
-		await Customer.findByIdAndDelete(req.body.id)
+		await Customer.findByIdAndDelete(req.params.id)
 		res.status(200).send({
 			message: 'Customer removed with success!'
 		})
 	} catch (e) {
-		res.status(500).send({
+		res.status(400).send({
 			message: 'Failed to process your request: ' + e
 		})
 	}
