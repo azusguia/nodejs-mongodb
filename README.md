@@ -1,11 +1,11 @@
 # nodejs-mongodb
 
-Basic template for nodejs and mongodb application using REST.
+Basic CRUD using nodejs and mongodb on REST architecture.
 
-![enter image description here](https://i.imgur.com/OkNZ94a.png)
+![enter image description here](https://i.imgur.com/XXNwCCe.gif)
 
 ## Usage
 
 * git clone
-* `yarn` / `npm i`
-* inside project execute the command `yarn run dev` / `npm run dev`
+* `yarn` / `npm i` to install dependencies
+* `yarn run dev` / `npm run dev`
