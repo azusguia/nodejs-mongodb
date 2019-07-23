@@ -8,4 +8,4 @@ Basic CRUD using nodejs and mongodb on REST architecture.
 
 * git clone
 * `yarn` / `npm i` to install dependencies
-* `yarn run dev` / `npm run dev`
+* `yarn server` / `npm run server`
