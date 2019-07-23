@@ -1,7 +1,5 @@
 let list = []
 
-alertify.set('notifier','position', 'top-center');
-
 window.addEventListener('load', () => {
     
 	axios.post(
@@ -41,7 +39,7 @@ function deleteCustomer(i) {
 		alertify.success(response.data.message)
 	})
 	.catch(error => {
-		alertify.error('Error deleting user.')
+		alertify.error('Error deleting customer.')
 		console.log(error.response)
 	})
 }

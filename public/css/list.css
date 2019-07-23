@@ -12,6 +12,10 @@ input[type=text] {
 input[type=number] {
   width: 70px;
 }
+
+button {
+  width: 80px;
+}
   
 .list {
   display: flex;
